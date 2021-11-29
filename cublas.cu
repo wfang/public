@@ -5,7 +5,7 @@
 #include <math.h>
 #include <cuda_runtime.h>
 #include "cublas_v2.h"
-#define M 60
+#define M 20
 #define N 5
 #define IDX2F(i,j,ld) ((((j)-1)*(ld))+((i)-1))
 
