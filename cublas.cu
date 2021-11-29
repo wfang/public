@@ -5,7 +5,7 @@
 #include <math.h>
 #include <cuda_runtime.h>
 #include "cublas_v2.h"
-#define M 20
+#define M 7
 #define N 5
 #define IDX2F(i,j,ld) ((((j)-1)*(ld))+((i)-1))
 
@@ -58,6 +58,12 @@ int main (void){
     }
     cudaFree (devPtrA);
     cublasDestroy(handle);
+    for (j = 0; j < N*M; j++) {
+           printf ("%7.0f", a[j]);
+        
+        printf ("\n");
+    }
+    
     for (j = 1; j <= N; j++) {
         for (i = 1; i <= M; i++) {
             printf ("%7.0f", a[IDX2F(i,j,M)]);
