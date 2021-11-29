@@ -26,6 +26,12 @@ int main (void){
         printf ("host memory allocation failed");
         return EXIT_FAILURE;
     }
+      for (j = 1; j <= N; j++) {
+        for (i = 1; i <= M; i++) {
+            printf("%d - %d == %d\n", j, i, IDX2F(i,j,M));            
+        }
+    }
+    
     for (j = 1; j <= N; j++) {
         for (i = 1; i <= M; i++) {
             a[IDX2F(i,j,M)] = (float)((i-1) * N + j);
