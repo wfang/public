@@ -28,7 +28,7 @@ int main (void){
     }
       for (j = 1; j <= N; j++) {
         for (i = 1; i <= M; i++) {
-            printf("%d - %d == %d\n", j, i, IDX2F(i,j,M));            
+            printf("%d , %d == %d -->  %f \n", j, i, IDX2F(i,j,M),(float)((i-1) * N + j) );            
         }
     }
     
